@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}ESAP{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'welcome/reset.css' %}" />
+    <link rel="stylesheet" href="{% static 'welcome/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'welcome/table-style.css' %}" />
+  </head>
+
+  <body>
+    <div>{% include 'welcome/navbar.html' %}</div>
+    <div>{% block content %}{% endblock %}</div>
+    <script
+      src="https://kit.fontawesome.com/0200c1b575.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'welcome/layout.html' %} {% block title %} Registro Persona - ESAP
+{%endblock%} {% block content %}
+<div class="container">
+  <div class="heading">Registro Persona</div>
+  <form method="post" action="{% url 'profile'%}" class="form">
+    {% csrf_token %}
+    <input
+      required=""
+      class="input"
+      type="full_name"
+      name="full_name"
+      id="full_name"
+      placeholder="Nombres y Apellidos *"
+    />
+    <input
+      class="input"
+      type="country"
+      name="country"
+      id="country"
+      placeholder="País"
+    />
+    <input
+      class="input"
+      type="description"
+      name="description"
+      id="description"
+      placeholder="Descripción"
+    />
+    <input
+      class="input"
+      type="github"
+      name="github"
+      id="github"
+      placeholder="Github"
+    />
+    <input
+      class="input"
+      type="linkedin"
+      name="linkedin"
+      id="linkedin"
+      placeholder="LinkedIn"
+    />
+
+    <input class="sigin-button" type="submit" value="Registrar" />
+  </form>
+</div>
+{% endblock %}

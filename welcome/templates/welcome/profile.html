@@ -1,0 +1,29 @@
+{% extends 'welcome/layout.html' %} {% load static %} {% block content %}
+<div class="e-card playing">
+  <div class="image"></div>
+
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
+
+  <div class="infotop">
+    <div class="wrapper">
+      <p>Bienvenido</p>
+      <a href="">
+        <img src="{% static 'img/avatar.png' %}" alt="" />
+      </a>
+      <div class="title">{{profile.full_name}}</div>
+      <div class="place">{{profile.country}}</div>
+      <div class="description">{{profile.description}}</div>
+    </div>
+    <div class="icons">
+      <a href="https://{{profile.github}}">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://{{profile.github}}">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+  {% endblock %}
+</div>

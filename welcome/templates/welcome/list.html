@@ -1,0 +1,32 @@
+{% extends 'welcome/layout.html' %} {% block content %}
+
+<div class="table-box">
+  <div class="table-row table-head">
+    <div class="table-cell first-cell">
+      <p>Nombre</p>
+    </div>
+    <div class="table-cell">
+      <p>Descripción</p>
+    </div>
+    <div class="table-cell last-cell">
+      <p>Ver perfil</p>
+    </div>
+  </div>
+  {%for profile in profiles%}
+  <div class="table-row">
+    <div class="table-cell first-cell">
+      <p>{{profile.full_name}}</p>
+    </div>
+    <div class="table-cell">
+      <p>{{profile.description}}</p>
+    </div>
+    <div class="table-cell last-cell">
+      <a href="/welcome/profile/{{profile.id}}">
+        <i class="fa-solid fa-eye"></i>
+      </a>
+    </div>
+  </div>
+  {%endfor%}
+</div>
+
+{% endblock %}
